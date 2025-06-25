@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal CV Website
 
-## Getting Started
+A modern, responsive CV website built with Next.js and deployed on GitHub Pages.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 📱 Fully responsive design
+- 🎨 Modern UI with Tailwind CSS and shadcn/ui
+- 🚀 Optimized for GitHub Pages
+- 📊 GitHub integration ready
+- 🔧 Easy to customize
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup Instructions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Fork this repository** to your GitHub account
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Clone your fork** locally:
+   \`\`\`bash
+   git clone https://github.com/yourusername/cv-website.git
+   cd cv-website
+   \`\`\`
 
-## Learn More
+3. **Install dependencies**:
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-To learn more about Next.js, take a look at the following resources:
+4. **Customize your information**:
+   - Edit `app/page.tsx` to add your personal information
+   - Replace placeholder image with your photo
+   - Update GitHub and LinkedIn URLs
+   - Modify projects, skills, and experience sections
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Test locally**:
+   \`\`\`bash
+   npm run dev
+   \`\`\`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+6. **Deploy to GitHub Pages**:
+   - Push your changes to the `main` branch
+   - Go to your repository settings
+   - Enable GitHub Pages with source "GitHub Actions"
+   - The site will be available at `https://yourusername.github.io/cv-website`
 
-## Deploy on Vercel
+## Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Personal Information
+Update the following in `app/page.tsx`:
+- Name and title
+- Contact information
+- Profile picture
+- About me section
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Projects
+Add your projects in the Featured Projects section with:
+- Project name and description
+- GitHub repository links
+- Live demo links
+- Technologies used
+
+### Skills
+Update the Technical Skills section with your expertise areas.
+
+### Experience
+Modify the Work Experience section with your professional background.
+
+## GitHub Integration
+
+To show real GitHub statistics:
+1. Consider using the GitHub API
+2. Update the GitHub Activity section with real data
+3. You can integrate with services like GitHub's REST API
+
+## License
+
+MIT License - feel free to use this template for your own CV website!

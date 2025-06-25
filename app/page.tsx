@@ -1,103 +1,566 @@
-import Image from "next/image";
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { ScrollProgressBar } from "@/components/ui/scroll-progress-bar"
+import { AdvancedScrollIndicator } from "@/components/ui/advanced-scroll-indicator"
+import { FadeIn } from "@/components/animations/fade-in"
+import { SlideInCard } from "@/components/animations/slide-in-card"
+import { StaggerContainer } from "@/components/animations/stagger-container"
+import { FloatingShape } from "@/components/decorative/floating-shape"
+import { ParallaxBackground } from "@/components/decorative/parallax-background"
+import {
+  Blob,
+  Circle,
+  DotsPattern,
+  GridPattern,
+  Triangle,
+  DiagonalLines,
+  Hexagons,
+} from "@/components/decorative/shapes"
+import { CalendarDays, ExternalLink, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { GitHubStats } from "@/components/github/github-stats"
 
-export default function Home() {
+const sections = [
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
+  { id: "github", label: "GitHub" },
+  { id: "education", label: "Education" },
+]
+
+export default function CVPage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 relative overflow-hidden">
+      {/* Scroll Progress Indicator */}
+      <ScrollProgressBar height={3} color="linear-gradient(to right, #3b82f6, #8b5cf6)" />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      {/* Section Navigation Dots */}
+      <AdvancedScrollIndicator sections={sections} />
+
+      {/* Enhanced Background Decorative Elements with More Dramatic Parallax */}
+      <FloatingShape className="top-[5%] right-[8%] text-blue-200" speed={0.3} direction="up">
+        <Blob className="w-80 h-80 opacity-30 animate-parallax-float" />
+      </FloatingShape>
+
+      <FloatingShape className="top-[25%] left-[2%] text-purple-200" speed={0.4} direction="down">
+        <Blob className="w-64 h-64 opacity-25 animate-parallax-float" />
+      </FloatingShape>
+
+      <FloatingShape className="bottom-[15%] right-[12%] text-teal-200" speed={0.35} direction="up">
+        <Blob className="w-72 h-72 opacity-30 animate-parallax-float" />
+      </FloatingShape>
+
+      <FloatingShape className="top-[55%] left-[5%] text-amber-200" speed={0.45} direction="down">
+        <Blob className="w-56 h-56 opacity-25 animate-parallax-float" />
+      </FloatingShape>
+
+      {/* Floating Circles with Enhanced Movement */}
+      <FloatingShape className="top-[8%] left-[20%]" speed={0.2} direction="right">
+        <Circle className="w-8 h-8 bg-blue-400 opacity-30" />
+      </FloatingShape>
+
+      <FloatingShape className="top-[18%] right-[25%]" speed={0.25} direction="left">
+        <Circle className="w-6 h-6 bg-purple-400 opacity-30" />
+      </FloatingShape>
+
+      <FloatingShape className="bottom-[35%] right-[30%]" speed={0.3} direction="up">
+        <Circle className="w-10 h-10 bg-green-400 opacity-30" />
+      </FloatingShape>
+
+      <FloatingShape className="bottom-[12%] left-[35%]" speed={0.35} direction="right">
+        <Circle className="w-7 h-7 bg-amber-400 opacity-30" />
+      </FloatingShape>
+
+      <FloatingShape className="top-[45%] right-[45%]" speed={0.15} direction="down">
+        <Circle className="w-5 h-5 bg-rose-400 opacity-30" />
+      </FloatingShape>
+
+      {/* Enhanced Triangles */}
+      <FloatingShape className="top-[35%] right-[38%]" speed={0.2} direction="down">
+        <Triangle className="border-l-[20px] border-r-[20px] border-b-[35px] border-b-indigo-400 opacity-30" />
+      </FloatingShape>
+
+      <FloatingShape className="bottom-[45%] left-[42%]" speed={0.25} direction="up">
+        <Triangle className="border-l-[15px] border-r-[15px] border-b-[25px] border-b-teal-400 opacity-30" />
+      </FloatingShape>
+
+      <FloatingShape className="top-[65%] right-[15%]" speed={0.18} direction="left">
+        <Triangle className="border-l-[12px] border-r-[12px] border-b-[20px] border-b-pink-400 opacity-30" />
+      </FloatingShape>
+
+      {/* Multiple Background Patterns with Different Speeds */}
+      <ParallaxBackground className="text-slate-300" speed={0.1}>
+        <GridPattern className="w-full h-full" />
+      </ParallaxBackground>
+
+      <FloatingShape className="top-0 left-0 w-full h-full text-slate-400" speed={0.15} direction="right">
+        <DiagonalLines className="w-full h-full opacity-5" />
+      </FloatingShape>
+
+      <FloatingShape className="top-0 left-0 w-full h-full text-slate-500" speed={0.08} direction="left">
+        <Hexagons className="w-full h-full opacity-5" />
+      </FloatingShape>
+
+      {/* Header */}
+      <header className="bg-white/90 shadow-sm border-b sticky top-0 z-40 backdrop-blur-md">
+        <FadeIn direction="down">
+          <div className="max-w-4xl mx-auto px-6 py-8">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="relative floating-animation">
+                <div className="absolute -inset-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-30 blur-xl animate-pulse"></div>
+                <Image
+                  src="/placeholder.svg?height=120&width=120"
+                  alt="Profile Picture"
+                  width={120}
+                  height={120}
+                  className="rounded-full border-4 border-white relative z-10"
+                />
+              </div>
+              <div className="text-center md:text-left flex-1">
+                <h1 className="text-3xl font-bold text-slate-900 mb-2">Yoan Gavrilov</h1>
+                <p className="text-xl text-slate-600 mb-4">Full Stack Developer</p>
+                <StaggerContainer>
+                  <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-slate-500">
+                    <div className="flex items-center gap-1">
+                      <MapPin className="w-4 h-4" />
+                      <span>London, UK</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Mail className="w-4 h-4" />
+                      <span>yoan.gavrilov24@gmail.com</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Phone className="w-4 h-4" />
+                      <span>+1 (555) 123-4567</span>
+                    </div>
+                  </div>
+                </StaggerContainer>
+              </div>
+              <StaggerContainer className="flex gap-3">
+                <Button variant="outline" size="icon" asChild className="hover:scale-110 transition-transform">
+                  <Link href="https://github.com/YAGavrilov19" target="_blank">
+                    <Github className="w-4 h-4" />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="icon" asChild className="hover:scale-110 transition-transform">
+                  <Link href="https://www.linkedin.com/in/yoan-gavrilov-08667322b?" target="_blank">
+                    <Linkedin className="w-4 h-4" />
+                  </Link>
+                </Button>
+              </StaggerContainer>
+            </div>
+          </div>
+        </FadeIn>
+      </header>
+
+      <main className="max-w-4xl mx-auto px-6 py-8 space-y-16 relative">
+        {/* About Section */}
+        <section id="about" className="relative scroll-mt-24">
+          <FloatingShape className="-top-16 -left-20 text-blue-500" speed={0.4} direction="right">
+            <DotsPattern className="w-48 h-48" />
+          </FloatingShape>
+
+          <FloatingShape className="-bottom-12 -right-12 text-indigo-400" speed={0.3} direction="left">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-300 to-indigo-300 opacity-20 blur-lg"></div>
+          </FloatingShape>
+
+          <SlideInCard direction="left">
+            <Card className="hover:shadow-lg transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full"></div>
+                  About Me
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600 leading-relaxed">
+                  {
+                    "• Passionate developer with six years of hands-on software development experience and expertise across multiple programming languages and development environments."
+                  }
+                </p>
+                <p className="text-slate-600 leading-relaxed">
+                  {
+                    "• Computer Science undergraduate at the University of Greenwich pursuing B.Sc. (Hons) with currently achieved First-Class Honors for Year 1."
+                  }
+                </p>
+              </CardContent>
+            </Card>
+          </SlideInCard>
+        </section>
+
+        {/* Skills Section */}
+        <section id="skills" className="relative scroll-mt-24">
+          <FloatingShape className="-bottom-16 -right-20 text-purple-500" speed={0.45} direction="left">
+            <DotsPattern className="w-48 h-48" />
+          </FloatingShape>
+
+          <FloatingShape className="-top-8 -left-8 text-green-400" speed={0.35} direction="right">
+            <div className="w-28 h-28 rounded-full bg-gradient-to-br from-green-300 to-emerald-300 opacity-20 blur-lg"></div>
+          </FloatingShape>
+
+          <SlideInCard direction="right" delay={200}>
+            <Card className="hover:shadow-lg transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <div className="w-2 h-8 bg-gradient-to-b from-green-500 to-blue-600 rounded-full"></div>
+                  Technical Skills
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <FadeIn delay={100}>
+                    <div>
+                      <h4 className="font-semibold text-slate-700 mb-2">Frontend</h4>
+                      <StaggerContainer className="flex flex-wrap gap-2">
+                        {["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5", "CSS3"].map((skill) => (
+                          <Badge
+                            key={skill}
+                            variant="secondary"
+                            className="hover:scale-105 transition-transform cursor-default"
+                          >
+                            {skill}
+                          </Badge>
+                        ))}
+                      </StaggerContainer>
+                    </div>
+                  </FadeIn>
+                  <FadeIn delay={200}>
+                    <div>
+                      <h4 className="font-semibold text-slate-700 mb-2">Backend</h4>
+                      <StaggerContainer className="flex flex-wrap gap-2">
+                        {["Node.js", "Python", "C#", "C++", "SSMS SQL"].map((skill) => (
+                          <Badge
+                            key={skill}
+                            variant="secondary"
+                            className="hover:scale-105 transition-transform cursor-default"
+                          >
+                            {skill}
+                          </Badge>
+                        ))}
+                      </StaggerContainer>
+                    </div>
+                  </FadeIn>
+                  <FadeIn delay={300}>
+                    <div>
+                      <h4 className="font-semibold text-slate-700 mb-2">Tools & Cloud</h4>
+                      <StaggerContainer className="flex flex-wrap gap-2">
+                        {["AWS", "Docker", "Kubernetes", "Git", "GitHub Actions", "Vercel", "Supabase"].map((skill) => (
+                          <Badge
+                            key={skill}
+                            variant="secondary"
+                            className="hover:scale-105 transition-transform cursor-default"
+                          >
+                            {skill}
+                          </Badge>
+                        ))}
+                      </StaggerContainer>
+                    </div>
+                  </FadeIn>
+                </div>
+              </CardContent>
+            </Card>
+          </SlideInCard>
+        </section>
+
+        {/* Experience Section */}
+        <section id="experience" className="relative scroll-mt-24">
+          <FloatingShape className="top-1/2 -translate-y-1/2 -left-32" speed={0.5} direction="right">
+            <div className="w-56 h-56 rounded-full bg-gradient-to-br from-purple-200 to-pink-200 opacity-40 blur-2xl"></div>
+          </FloatingShape>
+
+          <FloatingShape className="top-0 right-0 text-purple-400" speed={0.3} direction="down">
+            <Hexagons className="w-40 h-40" />
+          </FloatingShape>
+
+          <FadeIn delay={100}>
+            <Card className="hover:shadow-lg transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <div className="w-2 h-8 bg-gradient-to-b from-purple-500 to-pink-600 rounded-full"></div>
+                  Work Experience
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <FadeIn delay={200}>
+                  <div className="hover:bg-slate-50 p-4 rounded-lg transition-colors">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <h3 className="font-semibold text-slate-900">Senior Full Stack Developer</h3>
+                        <p className="text-slate-600">Tech Company Inc.</p>
+                      </div>
+                      <div className="flex items-center gap-1 text-sm text-slate-500">
+                        <CalendarDays className="w-4 h-4" />
+                        <span>2022 - Present</span>
+                      </div>
+                    </div>
+                    <StaggerContainer>
+                      <ul className="text-slate-600 space-y-1 ml-4">
+                        <li>• Led development of a microservices architecture serving 100k+ daily users</li>
+                        <li>• Improved application performance by 40% through code optimization and caching</li>
+                        <li>• Mentored junior developers and established coding standards</li>
+                      </ul>
+                    </StaggerContainer>
+                  </div>
+                </FadeIn>
+
+                <Separator />
+
+                <FadeIn delay={400}>
+                  <div className="hover:bg-slate-50 p-4 rounded-lg transition-colors">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <h3 className="font-semibold text-slate-900">Full Stack Developer</h3>
+                        <p className="text-slate-600">Startup Solutions</p>
+                      </div>
+                      <div className="flex items-center gap-1 text-sm text-slate-500">
+                        <CalendarDays className="w-4 h-4" />
+                        <span>2020 - 2022</span>
+                      </div>
+                    </div>
+                    <StaggerContainer>
+                      <ul className="text-slate-600 space-y-1 ml-4">
+                        <li>• Built responsive web applications using React and Node.js</li>
+                        <li>• Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                        <li>• Collaborated with design team to create pixel-perfect user interfaces</li>
+                      </ul>
+                    </StaggerContainer>
+                  </div>
+                </FadeIn>
+              </CardContent>
+            </Card>
+          </FadeIn>
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects" className="relative scroll-mt-24">
+          <FloatingShape className="top-1/2 -translate-y-1/2 -right-32" speed={0.55} direction="left">
+            <div className="w-56 h-56 rounded-full bg-gradient-to-br from-blue-200 to-teal-200 opacity-40 blur-2xl"></div>
+          </FloatingShape>
+
+          <FloatingShape className="bottom-0 left-0 text-teal-400" speed={0.25} direction="up">
+            <DiagonalLines className="w-36 h-36" />
+          </FloatingShape>
+
+          <SlideInCard direction="left" delay={300}>
+            <Card className="hover:shadow-lg transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <div className="w-2 h-8 bg-gradient-to-b from-orange-500 to-red-600 rounded-full"></div>
+                  Featured Projects
+                </CardTitle>
+                <CardDescription>Some of my recent work and contributions</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <StaggerContainer>
+                    <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="flex justify-between items-start mb-3">
+                        <h3 className="font-semibold text-slate-900">E-Commerce Platform</h3>
+                        <div className="flex gap-2">
+                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
+                            <Link href="https://github.com/yourusername/ecommerce" target="_blank">
+                              <Github className="w-4 h-4" />
+                            </Link>
+                          </Button>
+                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
+                            <Link href="https://your-ecommerce-demo.com" target="_blank">
+                              <ExternalLink className="w-4 h-4" />
+                            </Link>
+                          </Button>
+                        </div>
+                      </div>
+                      <p className="text-slate-600 text-sm mb-3">
+                        Full-featured e-commerce platform with payment integration, inventory management, and admin
+                        dashboard.
+                      </p>
+                      <div className="flex flex-wrap gap-1">
+                        {["React", "Node.js", "Stripe", "PostgreSQL"].map((tech) => (
+                          <Badge key={tech} variant="outline" className="text-xs hover:bg-slate-100 transition-colors">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="flex justify-between items-start mb-3">
+                        <h3 className="font-semibold text-slate-900">Task Management App</h3>
+                        <div className="flex gap-2">
+                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
+                            <Link href="https://github.com/yourusername/task-manager" target="_blank">
+                              <Github className="w-4 h-4" />
+                            </Link>
+                          </Button>
+                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
+                            <Link href="https://your-task-app.com" target="_blank">
+                              <ExternalLink className="w-4 h-4" />
+                            </Link>
+                          </Button>
+                        </div>
+                      </div>
+                      <p className="text-slate-600 text-sm mb-3">
+                        Collaborative task management tool with real-time updates, team collaboration, and progress
+                        tracking.
+                      </p>
+                      <div className="flex flex-wrap gap-1">
+                        {["Next.js", "Supabase", "Tailwind", "TypeScript"].map((tech) => (
+                          <Badge key={tech} variant="outline" className="text-xs hover:bg-slate-100 transition-colors">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="flex justify-between items-start mb-3">
+                        <h3 className="font-semibold text-slate-900">Weather Dashboard</h3>
+                        <div className="flex gap-2">
+                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
+                            <Link href="https://github.com/yourusername/weather-dashboard" target="_blank">
+                              <Github className="w-4 h-4" />
+                            </Link>
+                          </Button>
+                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
+                            <Link href="https://your-weather-app.com" target="_blank">
+                              <ExternalLink className="w-4 h-4" />
+                            </Link>
+                          </Button>
+                        </div>
+                      </div>
+                      <p className="text-slate-600 text-sm mb-3">
+                        Beautiful weather dashboard with forecasts, interactive maps, and location-based
+                        recommendations.
+                      </p>
+                      <div className="flex flex-wrap gap-1">
+                        {["Vue.js", "Python", "FastAPI", "Chart.js"].map((tech) => (
+                          <Badge key={tech} variant="outline" className="text-xs hover:bg-slate-100 transition-colors">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="flex justify-between items-start mb-3">
+                        <h3 className="font-semibold text-slate-900">Open Source Library</h3>
+                        <div className="flex gap-2">
+                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
+                            <Link href="https://github.com/yourusername/awesome-library" target="_blank">
+                              <Github className="w-4 h-4" />
+                            </Link>
+                          </Button>
+                        </div>
+                      </div>
+                      <p className="text-slate-600 text-sm mb-3">
+                        Lightweight utility library for React developers with 1000+ GitHub stars and active community.
+                      </p>
+                      <div className="flex flex-wrap gap-1">
+                        {["TypeScript", "React", "Rollup", "Jest"].map((tech) => (
+                          <Badge key={tech} variant="outline" className="text-xs hover:bg-slate-100 transition-colors">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  </StaggerContainer>
+                </div>
+              </CardContent>
+            </Card>
+          </SlideInCard>
+        </section>
+
+        {/* GitHub Contributions */}
+        <section id="github" className="relative scroll-mt-24">
+          <FloatingShape className="-bottom-16 left-1/2 -translate-x-1/2" speed={0.4} direction="up">
+            <div className="w-80 h-24 bg-gradient-to-r from-indigo-200 to-purple-200 opacity-30 blur-2xl"></div>
+          </FloatingShape>
+
+          <FloatingShape className="top-0 right-1/4 text-indigo-400" speed={0.2} direction="down">
+            <GridPattern className="w-32 h-32" />
+          </FloatingShape>
+
+          <FadeIn delay={400}>
+            <GitHubStats />
+          </FadeIn>
+        </section>
+
+        {/* Education */}
+        <section id="education" className="relative scroll-mt-24">
+          <FloatingShape className="-top-16 right-0" speed={0.35} direction="left">
+            <DotsPattern className="w-48 h-48 text-teal-500" />
+          </FloatingShape>
+
+          <FloatingShape className="-bottom-8 -left-8 text-cyan-400" speed={0.3} direction="right">
+            <div className="w-36 h-36 rounded-full bg-gradient-to-br from-teal-300 to-cyan-300 opacity-25 blur-lg"></div>
+          </FloatingShape>
+
+          <SlideInCard direction="right" delay={500}>
+            <Card className="hover:shadow-lg transition-shadow duration-300 bg-white/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <div className="w-2 h-8 bg-gradient-to-b from-teal-500 to-cyan-600 rounded-full"></div>
+                  Education
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex justify-between items-start hover:bg-slate-50 p-4 rounded-lg transition-colors">
+                  <div>
+                    <h3 className="font-semibold text-slate-900">Bachelor of Science in Computer Science</h3>
+                    <p className="text-slate-600">University of Greenwich, London</p>
+                  </div>
+
+                  <div className="flex items-center gap-1 text-sm text-slate-500">
+                    <CalendarDays className="w-4 h-4" />
+                    <span>2024 - Now</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </SlideInCard>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      {/* Footer */}
+      <div className="relative">
+        <FloatingShape className="bottom-0 left-0 right-0 h-48" speed={0.3} direction="up">
+          <div className="w-full h-full bg-gradient-to-t from-slate-900/30 to-transparent opacity-40"></div>
+        </FloatingShape>
+
+        <FadeIn delay={600}>
+          <footer className="bg-slate-900 text-white py-8 mt-16 relative">
+            <div className="absolute inset-0 overflow-hidden">
+              <FloatingShape className="inset-0" speed={0.2} direction="up">
+                <GridPattern className="w-full h-full text-white opacity-5" />
+              </FloatingShape>
+            </div>
+            <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+              <p className="mb-4">Let's connect and build something amazing together!</p>
+              <StaggerContainer className="flex justify-center gap-4">
+                <Button variant="secondary" asChild className="hover:scale-105 transition-transform">
+                  <a href="mailto:yoan.gavrilov24@gmail.com" className="flex items-center">
+                    <Mail className="w-4 h-4 mr-2" />
+                    Get In Touch
+                  </a>
+                </Button>
+                <Button variant="secondary" asChild className="hover:scale-105 transition-transform">
+                  <Link href="https://github.com/YAGavrilov19" target="_blank" className="flex items-center">
+                    <Github className="w-4 h-4 mr-2" />
+                    GitHub
+                  </Link>
+                </Button>
+              </StaggerContainer>
+            </div>
+          </footer>
+        </FadeIn>
+      </div>
     </div>
-  );
+  )
 }
