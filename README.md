@@ -1,6 +1,6 @@
 # Personal CV Website
 
-A modern, responsive CV website built with Next.js and deployed on GitHub Pages.
+A modern, responsive CV website built with Next.js and deployed on GitHub Pages. 
 
 ## Features
 
@@ -73,4 +73,4 @@ To show real GitHub statistics:
 
 ## License
 
-MIT License - feel free to use this template for your own CV website!
+MIT License
