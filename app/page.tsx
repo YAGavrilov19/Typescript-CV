@@ -141,12 +141,22 @@ export default function CVPage() {
                 </StaggerContainer>
               </div>
               <StaggerContainer className="flex gap-3">
-                <Button variant="outline" size="icon" asChild className="hover:scale-110 transition-transform">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  asChild
+                  className="hover:scale-110 transition-transform bg-transparent"
+                >
                   <Link href="https://github.com/YAGavrilov19" target="_blank">
                     <Github className="w-4 h-4" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="icon" asChild className="hover:scale-110 transition-transform">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  asChild
+                  className="hover:scale-110 transition-transform bg-transparent"
+                >
                   <Link href="https://www.linkedin.com/in/yoan-gavrilov-08667322b?" target="_blank">
                     <Linkedin className="w-4 h-4" />
                   </Link>
@@ -287,23 +297,39 @@ export default function CVPage() {
               <CardContent className="space-y-6">
                 <FadeIn delay={200}>
                   <div className="hover:bg-slate-50 p-4 rounded-lg transition-colors">
-                    <div className="flex justify-between items-start mb-2">
-                      <div>
-                        <h3 className="font-semibold text-slate-900">Senior Full Stack Developer</h3>
-                        <p className="text-slate-600">Tech Company Inc.</p>
+                    <div className="flex justify-between items-start mb-3">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="font-semibold text-slate-900">Code Translation</h3>
+                          <Badge variant="default" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
+                            Mobile
+                          </Badge>
+                        </div>
+                        <p className="text-slate-600">EnLoc</p>
                       </div>
                       <div className="flex items-center gap-1 text-sm text-slate-500">
                         <CalendarDays className="w-4 h-4" />
-                        <span>2022 - Present</span>
+                        <span>Sept. 2023 - Sept. 2023</span>
                       </div>
                     </div>
                     <StaggerContainer>
                       <ul className="text-slate-600 space-y-1 ml-4">
-                        <li>• Led development of a microservices architecture serving 100k+ daily users</li>
-                        <li>• Improved application performance by 40% through code optimization and caching</li>
-                        <li>• Mentored junior developers and established coding standards</li>
+                        <li>• Translated code for a mobile application designed for apartment rentals</li>
+                        <li>• Collaborated with developers to implement translated code seamlessly</li>
+                        <li>• Contributed to the successful launch of the mobile app in the German market</li>
                       </ul>
                     </StaggerContainer>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      <Badge variant="outline" className="text-xs">
+                        Javascript
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        Android Studio
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        Python
+                      </Badge>
+                    </div>
                   </div>
                 </FadeIn>
 
@@ -311,23 +337,124 @@ export default function CVPage() {
 
                 <FadeIn delay={400}>
                   <div className="hover:bg-slate-50 p-4 rounded-lg transition-colors">
-                    <div className="flex justify-between items-start mb-2">
-                      <div>
-                        <h3 className="font-semibold text-slate-900">Full Stack Developer</h3>
-                        <p className="text-slate-600">Startup Solutions</p>
+                    <div className="flex justify-between items-start mb-3">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="font-semibold text-slate-900">Game Development</h3>
+                          <Badge variant="default" className="bg-gradient-to-r from-green-500 to-teal-600 text-white">
+                            Full Stack
+                          </Badge>
+                        </div>
+                        <p className="text-slate-600">Ark Akademy</p>
                       </div>
                       <div className="flex items-center gap-1 text-sm text-slate-500">
                         <CalendarDays className="w-4 h-4" />
-                        <span>2020 - 2022</span>
+                        <span>July 2023 - July 2023</span>
                       </div>
                     </div>
                     <StaggerContainer>
                       <ul className="text-slate-600 space-y-1 ml-4">
-                        <li>• Built responsive web applications using React and Node.js</li>
-                        <li>• Implemented CI/CD pipelines reducing deployment time by 60%</li>
-                        <li>• Collaborated with design team to create pixel-perfect user interfaces</li>
+                        <li>• Participated in a summer program focused on game development</li>
+                        <li>• Honed skills in working with game engines and modifying game code to gain a deeper understanding of game logic</li>
                       </ul>
                     </StaggerContainer>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      <Badge variant="outline" className="text-xs">
+                        C++
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        Visual Studio
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        Git
+                      </Badge>
+                    </div>
+                  </div>
+                </FadeIn>
+
+                <Separator />
+
+                <FadeIn delay={600}>
+                  <div className="hover:bg-slate-50 p-4 rounded-lg transition-colors">
+                    <div className="flex justify-between items-start mb-3">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="font-semibold text-slate-900">Frontend Developer</h3>
+                          <Badge variant="default" className="bg-gradient-to-r from-orange-500 to-red-600 text-white">
+                            Frontend
+                          </Badge>
+                        </div>
+                        <p className="text-slate-600">Creative Agency Ltd.</p>
+                      </div>
+                      <div className="flex items-center gap-1 text-sm text-slate-500">
+                        <CalendarDays className="w-4 h-4" />
+                        <span>2018 - 2020</span>
+                      </div>
+                    </div>
+                    <StaggerContainer>
+                      <ul className="text-slate-600 space-y-1 ml-4">
+                        <li>• Developed interactive user interfaces for high-profile client websites</li>
+                        <li>• Optimized web performance achieving 95+ Lighthouse scores</li>
+                        <li>• Collaborated with UX designers to implement pixel-perfect designs</li>
+                      </ul>
+                    </StaggerContainer>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      <Badge variant="outline" className="text-xs">
+                        Vue.js
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        SCSS
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        Webpack
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        TypeScript
+                      </Badge>
+                    </div>
+                  </div>
+                </FadeIn>
+
+                <Separator />
+
+                <FadeIn delay={800}>
+                  <div className="hover:bg-slate-50 p-4 rounded-lg transition-colors">
+                    <div className="flex justify-between items-start mb-3">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="font-semibold text-slate-900">Backend Developer</h3>
+                          <Badge variant="default" className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white">
+                            Backend
+                          </Badge>
+                        </div>
+                        <p className="text-slate-600">Data Systems Corp.</p>
+                      </div>
+                      <div className="flex items-center gap-1 text-sm text-slate-500">
+                        <CalendarDays className="w-4 h-4" />
+                        <span>2017 - 2018</span>
+                      </div>
+                    </div>
+                    <StaggerContainer>
+                      <ul className="text-slate-600 space-y-1 ml-4">
+                        <li>• Designed and implemented RESTful APIs serving 50k+ requests daily</li>
+                        <li>• Optimized database queries reducing response times by 60%</li>
+                        <li>• Implemented robust authentication and authorization systems</li>
+                      </ul>
+                    </StaggerContainer>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      <Badge variant="outline" className="text-xs">
+                        Python
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        Django
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        PostgreSQL
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        Redis
+                      </Badge>
+                    </div>
                   </div>
                 </FadeIn>
               </CardContent>
@@ -360,7 +487,7 @@ export default function CVPage() {
                     <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                       <div className="flex justify-between items-start mb-3">
-                        <h3 className="font-semibold text-slate-900">E-Commerce Platform</h3>
+                        <h3 className="font-semibold text-slate-900">"Panopticon" - Face Detection Security App</h3>
                         <div className="flex gap-2">
                           <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
                             <Link href="https://github.com/yourusername/ecommerce" target="_blank">
