@@ -309,7 +309,7 @@ export default function CVPage() {
                       </div>
                       <div className="flex items-center gap-1 text-sm text-slate-500">
                         <CalendarDays className="w-4 h-4" />
-                        <span>Sept. 2023 - Sept. 2023</span>
+                        <span>Sep. 2023 - Sep. 2023</span>
                       </div>
                     </div>
                     <StaggerContainer>
@@ -349,7 +349,7 @@ export default function CVPage() {
                       </div>
                       <div className="flex items-center gap-1 text-sm text-slate-500">
                         <CalendarDays className="w-4 h-4" />
-                        <span>July 2023 - July 2023</span>
+                        <span>Jul. 2023 - Jul. 2023</span>
                       </div>
                     </div>
                     <StaggerContainer>
@@ -379,84 +379,127 @@ export default function CVPage() {
                     <div className="flex justify-between items-start mb-3">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="font-semibold text-slate-900">Frontend Developer</h3>
-                          <Badge variant="default" className="bg-gradient-to-r from-orange-500 to-red-600 text-white">
-                            Frontend
+                          <h3 className="font-semibold text-slate-900">Software Development Intern</h3>
+                          <Badge variant="default" className="bg-gradient-to-r from-green-500 to-teal-600 text-white">
+                            Full Stack
                           </Badge>
                         </div>
-                        <p className="text-slate-600">Creative Agency Ltd.</p>
+                        <p className="text-slate-600">Scalefocus</p>
                       </div>
                       <div className="flex items-center gap-1 text-sm text-slate-500">
                         <CalendarDays className="w-4 h-4" />
-                        <span>2018 - 2020</span>
+                        <span>Jan. 2023 - July 2023</span>
                       </div>
                     </div>
                     <StaggerContainer>
                       <ul className="text-slate-600 space-y-1 ml-4">
-                        <li>• Developed interactive user interfaces for high-profile client websites</li>
-                        <li>• Optimized web performance achieving 95+ Lighthouse scores</li>
-                        <li>• Collaborated with UX designers to implement pixel-perfect designs</li>
+                        <li>• Developed a security application that connects and shares information with a database, enhancing data accessibility and user interaction.</li>
+                        <li>• Gained hands-on experience in .NET development, which deepened my understanding of application functionality and .NET wrappers.</li>
+                        <li>• Engaged in testing and debugging processes, helping to ensure the application was reliable and met quality standards</li>
                       </ul>
                     </StaggerContainer>
                     <div className="flex flex-wrap gap-2 mt-3">
-                      <Badge variant="outline" className="text-xs">
-                        Vue.js
+                    <Badge variant="outline" className="text-xs">
+                        C#
                       </Badge>
                       <Badge variant="outline" className="text-xs">
-                        SCSS
+                        .NET
                       </Badge>
                       <Badge variant="outline" className="text-xs">
-                        Webpack
+                        SQL
                       </Badge>
                       <Badge variant="outline" className="text-xs">
-                        TypeScript
+                        OpenCV
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        AForge.NET
                       </Badge>
                     </div>
                   </div>
                 </FadeIn>
 
                 <Separator />
-
+                
                 <FadeIn delay={800}>
                   <div className="hover:bg-slate-50 p-4 rounded-lg transition-colors">
                     <div className="flex justify-between items-start mb-3">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="font-semibold text-slate-900">Backend Developer</h3>
+                          <h3 className="font-semibold text-slate-900">Intern</h3>
                           <Badge variant="default" className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white">
                             Backend
                           </Badge>
                         </div>
-                        <p className="text-slate-600">Data Systems Corp.</p>
+                        <p className="text-slate-600">Technologica.</p>
                       </div>
                       <div className="flex items-center gap-1 text-sm text-slate-500">
                         <CalendarDays className="w-4 h-4" />
-                        <span>2017 - 2018</span>
+                        <span>Oct. 2022 - Nov. 2022</span>
                       </div>
                     </div>
                     <StaggerContainer>
                       <ul className="text-slate-600 space-y-1 ml-4">
-                        <li>• Designed and implemented RESTful APIs serving 50k+ requests daily</li>
-                        <li>• Optimized database queries reducing response times by 60%</li>
-                        <li>• Implemented robust authentication and authorization systems</li>
+                        <li>• Developed a solid understanding of teamwork dynamics through collaboration on a project which.</li>
+                        <li>• Enhanced my ability to communicate effectively with team members.</li>
+
                       </ul>
                     </StaggerContainer>
                     <div className="flex flex-wrap gap-2 mt-3">
                       <Badge variant="outline" className="text-xs">
-                        Python
+                        C#
                       </Badge>
                       <Badge variant="outline" className="text-xs">
-                        Django
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        PostgreSQL
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        Redis
+                        Git
                       </Badge>
                     </div>
                   </div>
                 </FadeIn>
+
+                <FadeIn delay={600}>
+                  <div className="hover:bg-slate-50 p-4 rounded-lg transition-colors">
+                    <div className="flex justify-between items-start mb-3">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="font-semibold text-slate-900">Intern</h3>
+                          <Badge variant="default" className="bg-gradient-to-r from-orange-500 to-red-600 text-white">
+                            Frontend
+                          </Badge>
+                        </div>
+                        <p className="text-slate-600">A-Data Pro</p>
+                      </div>
+                      <div className="flex items-center gap-1 text-sm text-slate-500">
+                        <CalendarDays className="w-4 h-4" />
+                        <span>Nov. 2021 - July 2022</span>
+                      </div>
+                    </div>
+                    <StaggerContainer>
+                      <ul className="text-slate-600 space-y-1 ml-4">
+                        <li>• Gained hands-on experience from company employees, which deepened my understanding of the work environment and C++ programming language.</li>
+                        <li>• Gained hands-on experience in .NET development, which deepened my understanding of application functionality and .NET wrappers.</li>
+                        <li>• Engaged in testing and debugging processes, helping to ensure the application was reliable and met quality standards</li>
+                      </ul>
+                    </StaggerContainer>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                    <Badge variant="outline" className="text-xs">
+                        C#
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        .NET
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        SQL
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        OpenCV
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        AForge.NET
+                      </Badge>
+                    </div>
+                  </div>
+                </FadeIn>
+
+                
               </CardContent>
             </Card>
           </FadeIn>
