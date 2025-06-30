@@ -18,7 +18,7 @@ import {
   DiagonalLines,
   Hexagons,
 } from "@/components/decorative/shapes"
-import { CalendarDays, ExternalLink, MedalIcon,Github, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { CalendarDays, ExternalLink, MedalIcon, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { GitHubStats } from "@/components/github/github-stats"
@@ -355,7 +355,10 @@ export default function CVPage() {
                     <StaggerContainer>
                       <ul className="text-slate-600 space-y-1 ml-4">
                         <li>• Participated in a summer program focused on game development</li>
-                        <li>• Honed skills in working with game engines and modifying game code to gain a deeper understanding of game logic</li>
+                        <li>
+                          • Honed skills in working with game engines and modifying game code to gain a deeper
+                          understanding of game logic
+                        </li>
                       </ul>
                     </StaggerContainer>
                     <div className="flex flex-wrap gap-2 mt-3">
@@ -393,13 +396,22 @@ export default function CVPage() {
                     </div>
                     <StaggerContainer>
                       <ul className="text-slate-600 space-y-1 ml-4">
-                        <li>• Developed a security application that connects and shares information with a database, enhancing data accessibility and user interaction.</li>
-                        <li>• Gained hands-on experience in .NET development, which deepened my understanding of application functionality and .NET wrappers.</li>
-                        <li>• Engaged in testing and debugging processes, helping to ensure the application was reliable and met quality standards</li>
+                        <li>
+                          • Developed a security application that connects and shares information with a database,
+                          enhancing data accessibility and user interaction.
+                        </li>
+                        <li>
+                          • Gained hands-on experience in .NET development, which deepened my understanding of
+                          application functionality and .NET wrappers.
+                        </li>
+                        <li>
+                          • Engaged in testing and debugging processes, helping to ensure the application was reliable
+                          and met quality standards
+                        </li>
                       </ul>
                     </StaggerContainer>
                     <div className="flex flex-wrap gap-2 mt-3">
-                    <Badge variant="outline" className="text-xs">
+                      <Badge variant="outline" className="text-xs">
                         C#
                       </Badge>
                       <Badge variant="outline" className="text-xs">
@@ -419,7 +431,7 @@ export default function CVPage() {
                 </FadeIn>
 
                 <Separator />
-                
+
                 <FadeIn delay={800}>
                   <div className="hover:bg-slate-50 p-4 rounded-lg transition-colors">
                     <div className="flex justify-between items-start mb-3">
@@ -439,9 +451,10 @@ export default function CVPage() {
                     </div>
                     <StaggerContainer>
                       <ul className="text-slate-600 space-y-1 ml-4">
-                        <li>• Developed a solid understanding of teamwork dynamics through collaboration on a project.</li>
+                        <li>
+                          • Developed a solid understanding of teamwork dynamics through collaboration on a project.
+                        </li>
                         <li>• Enhanced my ability to communicate effectively with team members.</li>
-
                       </ul>
                     </StaggerContainer>
                     <div className="flex flex-wrap gap-2 mt-3">
@@ -474,13 +487,22 @@ export default function CVPage() {
                     </div>
                     <StaggerContainer>
                       <ul className="text-slate-600 space-y-1 ml-4">
-                        <li>• Gained hands-on experience from company employees, which deepened my understanding of the work environment and C++ programming language.</li>
-                        <li>• Gained hands-on experience in .NET development, which deepened my understanding of application functionality and .NET wrappers.</li>
-                        <li>• Engaged in testing and debugging processes, helping to ensure the application was reliable and met quality standards</li>
+                        <li>
+                          • Gained hands-on experience from company employees, which deepened my understanding of the
+                          work environment and C++ programming language.
+                        </li>
+                        <li>
+                          • Gained hands-on experience in .NET development, which deepened my understanding of
+                          application functionality and .NET wrappers.
+                        </li>
+                        <li>
+                          • Engaged in testing and debugging processes, helping to ensure the application was reliable
+                          and met quality standards
+                        </li>
                       </ul>
                     </StaggerContainer>
                     <div className="flex flex-wrap gap-2 mt-3">
-                    <Badge variant="outline" className="text-xs">
+                      <Badge variant="outline" className="text-xs">
                         C#
                       </Badge>
                       <Badge variant="outline" className="text-xs">
@@ -498,8 +520,6 @@ export default function CVPage() {
                     </div>
                   </div>
                 </FadeIn>
-
-                
               </CardContent>
             </Card>
           </FadeIn>
@@ -682,14 +702,65 @@ export default function CVPage() {
               </CardHeader>
               <CardContent>
                 <div className="flex justify-between items-start hover:bg-slate-50 p-4 rounded-lg transition-colors">
-                  <div>
-                    <h3 className="font-semibold text-slate-900">Bachelor of Science in Computer Science</h3>
-                    <p className="text-slate-600">University of Greenwich, London</p>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <Image
+                        src="/images/Greenwich.png?height=60&width=60"
+                        alt="University of Greenwich Logo"
+                        width={60}
+                        height={60}
+                        className="rounded-lg border border-slate-200"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-slate-900">Bachelor of Science in Computer Science</h3>
+                      <p className="text-slate-600">University of Greenwich, London</p>
+                    </div>
                   </div>
 
                   <div className="flex items-center gap-1 text-sm text-slate-500">
                     <CalendarDays className="w-4 h-4" />
                     <span>2024 - Now</span>
+                  </div>
+                </div>
+              </CardContent>
+              <CardContent>
+                <div className="flex justify-between items-start hover:bg-slate-50 p-4 rounded-lg transition-colors">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <Image
+                        src="/placeholder.svg?height=60&width=60"
+                        alt="Vocational School Logo"
+                        width={60}
+                        height={60}
+                        className="rounded-lg border border-slate-200"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-slate-900">Programming Assurance</h3>
+                      <p className="text-slate-600">Vocational School of Computer Programming and Innovations</p>
+                      <ul className="text-slate-600 space-y-1 ml-4 mt-2">
+                        <li> ‎ </li>
+                        <li>
+                          • Learned Programming, Object-Oriented Programming and Algorithms and Data Structures with
+                          C++, C# and JavaScript
+                        </li>
+                        <li>• Learned working with Databases in SQL</li>
+                        <li>
+                          • Participated in many extracurricular activities (Arduino, Company Internships, Mentoring
+                          School Projects)
+                        </li>
+                        <li>
+                          • Gained many certificates and badges by various companies (Adobe, Apple, Cisco, Microsoft,
+                          Project Management Institute)
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-1 text-sm text-slate-500 whitespace-nowrap">
+                    <CalendarDays className="w-4 h-4" />
+                    <span>2019 - 2024</span>
                   </div>
                 </div>
               </CardContent>
