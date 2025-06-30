@@ -18,7 +18,7 @@ import {
   DiagonalLines,
   Hexagons,
 } from "@/components/decorative/shapes"
-import { CalendarDays, ExternalLink, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { CalendarDays, ExternalLink, MedalIcon,Github, Linkedin, Mail, MapPin, Phone } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { GitHubStats } from "@/components/github/github-stats"
@@ -226,7 +226,7 @@ export default function CVPage() {
                     <div>
                       <h4 className="font-semibold text-slate-700 mb-2">Frontend</h4>
                       <StaggerContainer className="flex flex-wrap gap-2">
-                        {["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5", "CSS3"].map((skill) => (
+                        {["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5", "PHP", "CSS3"].map((skill) => (
                           <Badge
                             key={skill}
                             variant="secondary"
@@ -258,7 +258,7 @@ export default function CVPage() {
                     <div>
                       <h4 className="font-semibold text-slate-700 mb-2">Tools & Cloud</h4>
                       <StaggerContainer className="flex flex-wrap gap-2">
-                        {["AWS", "Docker", "Kubernetes", "Git", "GitHub Actions", "Vercel", "Supabase"].map((skill) => (
+                        {["Git", "GitHub Actions", "AWS", "Linux", "Vercel", "phpMyAdmin"].map((skill) => (
                           <Badge
                             key={skill}
                             variant="secondary"
@@ -430,7 +430,7 @@ export default function CVPage() {
                             Backend
                           </Badge>
                         </div>
-                        <p className="text-slate-600">Technologica.</p>
+                        <p className="text-slate-600">Technologica</p>
                       </div>
                       <div className="flex items-center gap-1 text-sm text-slate-500">
                         <CalendarDays className="w-4 h-4" />
@@ -439,7 +439,7 @@ export default function CVPage() {
                     </div>
                     <StaggerContainer>
                       <ul className="text-slate-600 space-y-1 ml-4">
-                        <li>• Developed a solid understanding of teamwork dynamics through collaboration on a project which.</li>
+                        <li>• Developed a solid understanding of teamwork dynamics through collaboration on a project.</li>
                         <li>• Enhanced my ability to communicate effectively with team members.</li>
 
                       </ul>
@@ -724,6 +724,12 @@ export default function CVPage() {
                   <Link href="https://github.com/YAGavrilov19" target="_blank" className="flex items-center">
                     <Github className="w-4 h-4 mr-2" />
                     GitHub
+                  </Link>
+                </Button>
+                <Button variant="secondary" asChild className="hover:scale-105 transition-transform">
+                  <Link href="https://www.credly.com/users/yoan-gavrilov" target="_blank" className="flex items-center">
+                    <MedalIcon className="w-4 h-4 mr-2" />
+                    Badges
                   </Link>
                 </Button>
               </StaggerContainer>
