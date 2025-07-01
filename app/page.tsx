@@ -131,12 +131,9 @@ export default function CVPage() {
                     </div>
                     <div className="flex items-center gap-1">
                       <Mail className="w-4 h-4" />
-                      <span>yoan.gavrilov24@gmail.com</span>
+                      <a href="mailto:yoan.gavrilov24@gmail.com" className="flex items-center"> yoan.gavrilov24@gmail.com</a>
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Phone className="w-4 h-4" />
-                      <span>+1 (555) 123-4567</span>
-                    </div>
+                    
                   </div>
                 </StaggerContainer>
               </div>
@@ -552,12 +549,7 @@ export default function CVPage() {
                       <div className="flex justify-between items-start mb-3 relative z-10">
                         <h3 className="font-semibold text-slate-900">"Panopticon" - Face Detection Security App</h3>
                         <div className="flex gap-2">
-                          <Button
-                            variant="secondary"
-                            size="icon"
-                            className="hover:scale-110 transition-transform"
-                            asChild
-                          >
+                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
                             <Link href="https://github.com/YAGavrilov19/Panopticon-Face-Detection" target="_blank">
                               <Github className="w-4 h-4" />
                             </Link>
@@ -569,7 +561,7 @@ export default function CVPage() {
                         dashboard.
                       </p>
                       <div className="flex flex-wrap gap-1">
-                        {["React", "Node.js", "Stripe", "PostgreSQL"].map((tech) => (
+                        {[".NET", "C#", "SQL (SSMS)", "Git"].map((tech) => (
                           <Badge key={tech} variant="outline" className="text-xs hover:bg-slate-100 transition-colors">
                             {tech}
                           </Badge>
@@ -580,26 +572,19 @@ export default function CVPage() {
                     <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
                       <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
                       <div className="flex justify-between items-start mb-3 relative z-10">
-                        <h3 className="font-semibold text-slate-900">Task Management App</h3>
+                        <h3 className="font-semibold text-slate-900">Family Tree Explorer Python</h3>
                         <div className="flex gap-2">
                           <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
-                            <Link href="https://github.com/yourusername/task-manager" target="_blank">
+                            <Link href="https://github.com/YAGavrilov19/Python-Family-Tree-Explorer" target="_blank">
                               <Github className="w-4 h-4" />
                             </Link>
-                          </Button>
-                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
-                            <Link href="https://your-task-app.com" target="_blank">
-                              <ExternalLink className="w-4 h-4" />
-                            </Link>
-                          </Button>
                         </div>
                       </div>
                       <p className="text-slate-600 text-sm mb-3">
-                        Collaborative task management tool with real-time updates, team collaboration, and progress
-                        tracking.
+                        A Python project where the user can explore a Family Tree from a given array of the members, their age and their relations to eachother.
                       </p>
                       <div className="flex flex-wrap gap-1">
-                        {["Next.js", "Supabase", "Tailwind", "TypeScript"].map((tech) => (
+                        {["Python", "Git", "Github"].map((tech) => (
                           <Badge key={tech} variant="outline" className="text-xs hover:bg-slate-100 transition-colors">
                             {tech}
                           </Badge>
@@ -789,6 +774,12 @@ export default function CVPage() {
                   <a href="mailto:yoan.gavrilov24@gmail.com" className="flex items-center">
                     <Mail className="w-4 h-4 mr-2" />
                     Get In Touch
+                  </a>
+                </Button>
+                <Button variant="secondary" asChild className="hover:scale-105 transition-transform">
+                  <Link href="https://www.linkedin.com/in/yoan-gavrilov-08667322b" target="_blank" className="flex items-center">
+                    <Linkedin className="w-4 h-4 mr-2" />
+                    LinkedIn
                   </a>
                 </Button>
                 <Button variant="secondary" asChild className="hover:scale-105 transition-transform">
