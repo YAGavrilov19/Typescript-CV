@@ -52,8 +52,31 @@ export async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
     if (!response.ok) throw new Error("Failed to fetch repositories")
     const repos = await response.json()
 
+    // For each repo, if language is null, try to fetch languages breakdown
+    const reposWithLanguages = await Promise.all(
+      repos.map(async (repo: GitHubRepo) => {
+        if (!repo.language) {
+          try {
+            // Fetch languages for this specific repo
+            const langResponse = await fetch(`https://api.github.com/repos/${repo.full_name}/languages`)
+            if (langResponse.ok) {
+              const languages = await langResponse.json()
+              // Get the language with the highest byte count
+              const topLanguage = Object.entries(languages).sort(([, a], [, b]) => (b as number) - (a as number))[0]
+              if (topLanguage) {
+                repo.language = topLanguage[0]
+              }
+            }
+          } catch (error) {
+            console.warn(`Could not fetch languages for ${repo.name}:`, error)
+          }
+        }
+        return repo
+      }),
+    )
+
     // Filter out forks and sort by stars
-    return repos
+    return reposWithLanguages
       .filter((repo: GitHubRepo) => !repo.fork)
       .sort((a: GitHubRepo, b: GitHubRepo) => b.stargazers_count - a.stargazers_count)
   } catch (error) {

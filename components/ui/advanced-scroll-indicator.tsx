@@ -54,15 +54,12 @@ export function AdvancedScrollIndicator({ className, sections = [], showLabels =
     <div className={cn("fixed right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-2", className)}>
       {/* Main progress bar - now vertical */}
       <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 w-1 h-64">
-        <div
-          className="w-1 bg-gradient-to-b from-blue-500 to-purple-600 transition-all duration-150 ease-out"
-          style={{ height: `${progress}%` }}
-        />
+        
       </div>
 
       {/* Section indicators */}
       {sections.length > 0 && (
-        <div className="hidden md:flex flex-col gap-4 items-center h-64 justify-between ml-6">
+        <div className="hidden md:flex flex-col gap-3 items-start h-64 justify-start ml-6 space-y-2">
           {sections.map((section) => (
             <a
               key={section.id}

@@ -18,7 +18,7 @@ import {
   DiagonalLines,
   Hexagons,
 } from "@/components/decorative/shapes"
-import { CalendarDays, ExternalLink, MedalIcon, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { CalendarDays, ExternalLink, MedalIcon, Github, Linkedin, Mail, MapPin } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { GitHubStats } from "@/components/github/github-stats"
@@ -39,7 +39,7 @@ export default function CVPage() {
       <ScrollProgressBar height={3} color="linear-gradient(to right, #3b82f6, #8b5cf6)" />
 
       {/* Section Navigation Dots */}
-      <AdvancedScrollIndicator sections={sections} />
+      <AdvancedScrollIndicator sections={sections} className="fixed right-8 top-1/2 -translate-y-1/2 z-50" />
 
       {/* Enhanced Background Decorative Elements with More Dramatic Parallax */}
       <FloatingShape className="top-[5%] right-[8%] text-blue-200" speed={0.3} direction="up">
@@ -131,9 +131,11 @@ export default function CVPage() {
                     </div>
                     <div className="flex items-center gap-1">
                       <Mail className="w-4 h-4" />
-                      <a href="mailto:yoan.gavrilov24@gmail.com" className="flex items-center"> yoan.gavrilov24@gmail.com</a>
+                      <a href="mailto:yoan.gavrilov24@gmail.com" className="flex items-center">
+                        {" "}
+                        yoan.gavrilov24@gmail.com
+                      </a>
                     </div>
-                    
                   </div>
                 </StaggerContainer>
               </div>
@@ -154,7 +156,7 @@ export default function CVPage() {
                   asChild
                   className="hover:scale-110 transition-transform bg-transparent"
                 >
-                  <Link href="https://www.linkedin.com/in/yoan-gavrilov-08667322b?" target="_blank">
+                  <Link href="https://www.linkedin.com/in/yoan-gavrilov-08667322b" target="_blank">
                     <Linkedin className="w-4 h-4" />
                   </Link>
                 </Button>
@@ -297,7 +299,7 @@ export default function CVPage() {
                     <div className="flex justify-between items-start mb-3">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="font-semibold text-slate-900">Code Translation</h3>
+                          <h3 className="font-semibold text-slate-900">Localization Engineer</h3>
                           <Badge variant="default" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
                             Mobile
                           </Badge>
@@ -311,8 +313,8 @@ export default function CVPage() {
                     </div>
                     <StaggerContainer>
                       <ul className="text-slate-600 space-y-1 ml-4">
-                        <li>• Translated code for a mobile application designed for apartment rentals</li>
-                        <li>• Collaborated with developers to implement translated code seamlessly</li>
+                        <li>• Localized code for a mobile application designed for apartment rentals</li>
+                        <li>• Collaborated with developers to implement localized code seamlessly</li>
                         <li>• Contributed to the successful launch of the mobile app in the German market</li>
                       </ul>
                     </StaggerContainer>
@@ -578,10 +580,12 @@ export default function CVPage() {
                             <Link href="https://github.com/YAGavrilov19/Python-Family-Tree-Explorer" target="_blank">
                               <Github className="w-4 h-4" />
                             </Link>
+                          </Button>
                         </div>
                       </div>
                       <p className="text-slate-600 text-sm mb-3">
-                        A Python project where the user can explore a Family Tree from a given array of the members, their age and their relations to eachother.
+                        A Python project where the user can explore a Family Tree from a given array of the members,
+                        their age and their relations to eachother.
                       </p>
                       <div className="flex flex-wrap gap-1">
                         {["Python", "Git", "Github"].map((tech) => (
@@ -777,10 +781,14 @@ export default function CVPage() {
                   </a>
                 </Button>
                 <Button variant="secondary" asChild className="hover:scale-105 transition-transform">
-                  <Link href="https://www.linkedin.com/in/yoan-gavrilov-08667322b" target="_blank" className="flex items-center">
+                  <Link
+                    href="https://www.linkedin.com/in/yoan-gavrilov-08667322b"
+                    target="_blank"
+                    className="flex items-center"
+                  >
                     <Linkedin className="w-4 h-4 mr-2" />
                     LinkedIn
-                  </a>
+                  </Link>
                 </Button>
                 <Button variant="secondary" asChild className="hover:scale-105 transition-transform">
                   <Link href="https://github.com/YAGavrilov19" target="_blank" className="flex items-center">
