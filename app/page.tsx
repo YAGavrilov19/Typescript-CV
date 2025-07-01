@@ -548,18 +548,18 @@ export default function CVPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <StaggerContainer>
                     <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                      <div className="flex justify-between items-start mb-3">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+                      <div className="flex justify-between items-start mb-3 relative z-10">
                         <h3 className="font-semibold text-slate-900">"Panopticon" - Face Detection Security App</h3>
                         <div className="flex gap-2">
-                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
-                            <Link href="https://github.com/yourusername/ecommerce" target="_blank">
+                          <Button
+                            variant="secondary"
+                            size="icon"
+                            className="hover:scale-110 transition-transform"
+                            asChild
+                          >
+                            <Link href="https://github.com/YAGavrilov19/Panopticon-Face-Detection" target="_blank">
                               <Github className="w-4 h-4" />
-                            </Link>
-                          </Button>
-                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
-                            <Link href="https://your-ecommerce-demo.com" target="_blank">
-                              <ExternalLink className="w-4 h-4" />
                             </Link>
                           </Button>
                         </div>
@@ -578,8 +578,8 @@ export default function CVPage() {
                     </div>
 
                     <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
-                      <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                      <div className="flex justify-between items-start mb-3">
+                      <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+                      <div className="flex justify-between items-start mb-3 relative z-10">
                         <h3 className="font-semibold text-slate-900">Task Management App</h3>
                         <div className="flex gap-2">
                           <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
@@ -608,8 +608,8 @@ export default function CVPage() {
                     </div>
 
                     <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
-                      <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                      <div className="flex justify-between items-start mb-3">
+                      <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+                      <div className="flex justify-between items-start mb-3 relative z-10">
                         <h3 className="font-semibold text-slate-900">Weather Dashboard</h3>
                         <div className="flex gap-2">
                           <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
@@ -638,8 +638,8 @@ export default function CVPage() {
                     </div>
 
                     <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                      <div className="flex justify-between items-start mb-3">
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+                      <div className="flex justify-between items-start mb-3 relative z-10">
                         <h3 className="font-semibold text-slate-900">Open Source Library</h3>
                         <div className="flex gap-2">
                           <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
