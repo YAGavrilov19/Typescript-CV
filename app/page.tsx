@@ -705,7 +705,7 @@ export default function CVPage() {
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
                       <Image
-                        src="/images/Greenwich.png?height=60&width=60"
+                        src="https://i.imgur.com/KSQxdNK.png?height=60&width=60"
                         alt="University of Greenwich Logo"
                         width={60}
                         height={60}
@@ -729,7 +729,7 @@ export default function CVPage() {
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
                       <Image
-                        src="/placeholder.svg?height=60&width=60"
+                        src="https://i.imgur.com/icXwTfZ.png?height=60&width=60"
                         alt="Vocational School Logo"
                         width={60}
                         height={60}
