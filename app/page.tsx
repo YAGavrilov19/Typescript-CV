@@ -502,20 +502,15 @@ export default function CVPage() {
                     </StaggerContainer>
                     <div className="flex flex-wrap gap-2 mt-3">
                       <Badge variant="outline" className="text-xs">
-                        C#
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        .NET
+                        C++
                       </Badge>
                       <Badge variant="outline" className="text-xs">
                         SQL
                       </Badge>
                       <Badge variant="outline" className="text-xs">
-                        OpenCV
+                        Git
                       </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        AForge.NET
-                      </Badge>
+
                     </div>
                   </div>
                 </FadeIn>
@@ -571,6 +566,33 @@ export default function CVPage() {
                       </div>
                     </div>
 
+                    
+
+                    <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+                      <div className="flex justify-between items-start mb-3 relative z-10">
+                        <h3 className="font-semibold text-slate-900">Algorithm optimization through Python</h3>
+                        <div className="flex gap-2">
+                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
+                            <Link href="https://github.com/YAGavrilov19/Python-Optimised-Algorithms" target="_blank">
+                              <Github className="w-4 h-4" />
+                            </Link>
+                          </Button>
+
+                        </div>
+                      </div>
+                      <p className="text-slate-600 text-sm mb-3">
+                        An series of optimisations on an equation which aim to decrease the time of completion from under 60 seconds to be as short as possible.
+                      </p>
+                      <div className="flex flex-wrap gap-1">
+                        {["Vue.js", "Python", "FastAPI", "Chart.js"].map((tech) => (
+                          <Badge key={tech} variant="outline" className="text-xs hover:bg-slate-100 transition-colors">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+
                     <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
                       <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
                       <div className="flex justify-between items-start mb-3 relative z-10">
@@ -589,36 +611,6 @@ export default function CVPage() {
                       </p>
                       <div className="flex flex-wrap gap-1">
                         {["Python", "Git", "Github"].map((tech) => (
-                          <Badge key={tech} variant="outline" className="text-xs hover:bg-slate-100 transition-colors">
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
-                      <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
-                      <div className="flex justify-between items-start mb-3 relative z-10">
-                        <h3 className="font-semibold text-slate-900">Weather Dashboard</h3>
-                        <div className="flex gap-2">
-                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
-                            <Link href="https://github.com/yourusername/weather-dashboard" target="_blank">
-                              <Github className="w-4 h-4" />
-                            </Link>
-                          </Button>
-                          <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
-                            <Link href="https://your-weather-app.com" target="_blank">
-                              <ExternalLink className="w-4 h-4" />
-                            </Link>
-                          </Button>
-                        </div>
-                      </div>
-                      <p className="text-slate-600 text-sm mb-3">
-                        Beautiful weather dashboard with forecasts, interactive maps, and location-based
-                        recommendations.
-                      </p>
-                      <div className="flex flex-wrap gap-1">
-                        {["Vue.js", "Python", "FastAPI", "Chart.js"].map((tech) => (
                           <Badge key={tech} variant="outline" className="text-xs hover:bg-slate-100 transition-colors">
                             {tech}
                           </Badge>
