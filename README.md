@@ -1,5 +1,5 @@
 # Personal CV Website
-
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?YAGavrilov19=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
 A modern, responsive CV website built with Next.js and deployed on GitHub Pages.
 
 ## Features
