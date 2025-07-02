@@ -18,7 +18,7 @@ import {
   DiagonalLines,
   Hexagons,
 } from "@/components/decorative/shapes"
-import { CalendarDays, ExternalLink, MedalIcon, Github, Linkedin, Mail, MapPin } from "lucide-react"
+import { CalendarDays, MedalIcon, Github, Linkedin, Mail, MapPin } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { GitHubStats } from "@/components/github/github-stats"
@@ -38,25 +38,40 @@ export default function CVPage() {
       {/* Scroll Progress Indicator */}
       <ScrollProgressBar height={3} color="linear-gradient(to right, #3b82f6, #8b5cf6)" />
 
-      {/* Section Navigation Dots */}
-      <AdvancedScrollIndicator sections={sections} className="fixed right-8 top-1/2 -translate-y-1/2 z-50" />
+      {/* Section Navigation Dots - Hidden on mobile */}
+      <div className="hidden lg:block">
+        <AdvancedScrollIndicator sections={sections} className="fixed right-8 top-1/2 -translate-y-1/2 z-50" />
+      </div>
 
-      {/* Enhanced Background Decorative Elements with More Dramatic Parallax */}
-      <FloatingShape className="top-[5%] right-[8%] text-blue-200" speed={0.3} direction="up">
-        <Blob className="w-80 h-80 opacity-30 animate-parallax-float" />
-      </FloatingShape>
+      {/* Enhanced Background Decorative Elements - Reduced on mobile */}
+      <div className="hidden sm:block">
+        <FloatingShape className="top-[5%] right-[8%] text-blue-200" speed={0.3} direction="up">
+          <Blob className="w-60 sm:w-80 h-60 sm:h-80 opacity-30 animate-parallax-float" />
+        </FloatingShape>
 
-      <FloatingShape className="top-[25%] left-[2%] text-purple-200" speed={0.4} direction="down">
-        <Blob className="w-64 h-64 opacity-25 animate-parallax-float" />
-      </FloatingShape>
+        <FloatingShape className="top-[25%] left-[2%] text-purple-200" speed={0.4} direction="down">
+          <Blob className="w-48 sm:w-64 h-48 sm:h-64 opacity-25 animate-parallax-float" />
+        </FloatingShape>
 
-      <FloatingShape className="bottom-[15%] right-[12%] text-teal-200" speed={0.35} direction="up">
-        <Blob className="w-72 h-72 opacity-30 animate-parallax-float" />
-      </FloatingShape>
+        <FloatingShape className="bottom-[15%] right-[12%] text-teal-200" speed={0.35} direction="up">
+          <Blob className="w-56 sm:w-72 h-56 sm:h-72 opacity-30 animate-parallax-float" />
+        </FloatingShape>
 
-      <FloatingShape className="top-[55%] left-[5%] text-amber-200" speed={0.45} direction="down">
-        <Blob className="w-56 h-56 opacity-25 animate-parallax-float" />
-      </FloatingShape>
+        <FloatingShape className="top-[55%] left-[5%] text-amber-200" speed={0.45} direction="down">
+          <Blob className="w-44 sm:w-56 h-44 sm:h-56 opacity-25 animate-parallax-float" />
+        </FloatingShape>
+      </div>
+
+      {/* Smaller floating elements for mobile */}
+      <div className="block sm:hidden">
+        <FloatingShape className="top-[10%] right-[5%] text-blue-200" speed={0.2} direction="up">
+          <Blob className="w-32 h-32 opacity-20 animate-parallax-float" />
+        </FloatingShape>
+
+        <FloatingShape className="bottom-[20%] left-[5%] text-purple-200" speed={0.25} direction="down">
+          <Blob className="w-28 h-28 opacity-20 animate-parallax-float" />
+        </FloatingShape>
+      </div>
 
       {/* Floating Circles with Enhanced Movement */}
       <FloatingShape className="top-[8%] left-[20%]" speed={0.2} direction="right">
@@ -108,38 +123,37 @@ export default function CVPage() {
       {/* Header */}
       <header className="bg-white/90 shadow-sm border-b sticky top-0 z-40 backdrop-blur-md">
         <FadeIn direction="down">
-          <div className="max-w-4xl mx-auto px-6 py-8">
-            <div className="flex flex-col md:flex-row items-center gap-6">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+            <div className="flex flex-col items-center gap-4 sm:gap-6 text-center">
               <div className="relative floating-animation">
-                <div className="absolute -inset-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-30 blur-xl animate-pulse"></div>
+                <div className="absolute -inset-4 sm:-inset-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-30 blur-xl animate-pulse"></div>
                 <Image
                   src="/placeholder.svg?height=120&width=120"
                   alt="Profile Picture"
-                  width={120}
-                  height={120}
-                  className="rounded-full border-4 border-white relative z-10"
+                  width={100}
+                  height={100}
+                  className="sm:w-[120px] sm:h-[120px] rounded-full border-4 border-white relative z-10"
                 />
               </div>
-              <div className="text-center md:text-left flex-1">
-                <h1 className="text-3xl font-bold text-slate-900 mb-2">Yoan Gavrilov</h1>
-                <p className="text-xl text-slate-600 mb-4">Full Stack Developer</p>
+              <div className="flex-1">
+                <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Yoan Gavrilov</h1>
+                <p className="text-lg sm:text-xl text-slate-600 mb-4">Full Stack Developer</p>
                 <StaggerContainer>
-                  <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-slate-500">
-                    <div className="flex items-center gap-1">
+                  <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-4 text-sm text-slate-500">
+                    <div className="flex items-center justify-center gap-1">
                       <MapPin className="w-4 h-4" />
                       <span>London, UK</span>
                     </div>
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center justify-center gap-1">
                       <Mail className="w-4 h-4" />
-                      <a href="mailto:yoan.gavrilov24@gmail.com" className="flex items-center">
-                        {" "}
+                      <a href="mailto:yoan.gavrilov24@gmail.com" className="break-all sm:break-normal">
                         yoan.gavrilov24@gmail.com
                       </a>
                     </div>
                   </div>
                 </StaggerContainer>
               </div>
-              <StaggerContainer className="flex gap-3">
+              <StaggerContainer className="flex gap-3 mt-4 sm:mt-0">
                 <Button
                   variant="outline"
                   size="icon"
@@ -166,7 +180,7 @@ export default function CVPage() {
         </FadeIn>
       </header>
 
-      <main className="max-w-4xl mx-auto px-6 py-8 space-y-16 relative">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-12 sm:space-y-16 relative">
         {/* About Section */}
         <section id="about" className="relative scroll-mt-24">
           <FloatingShape className="-top-16 -left-20 text-blue-500" speed={0.4} direction="right">
@@ -344,7 +358,7 @@ export default function CVPage() {
                             Full Stack
                           </Badge>
                         </div>
-                        <p className="text-slate-600">Ark Akademy</p>
+                        <p className="text-slate-600">Arc Academy</p>
                       </div>
                       <div className="flex items-center gap-1 text-sm text-slate-500">
                         <CalendarDays className="w-4 h-4" />
@@ -510,7 +524,6 @@ export default function CVPage() {
                       <Badge variant="outline" className="text-xs">
                         Git
                       </Badge>
-
                     </div>
                   </div>
                 </FadeIn>
@@ -539,7 +552,8 @@ export default function CVPage() {
                 <CardDescription>Some of my recent work and contributions</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-2 gap-6">
+                {/* Featured Repositories - Mobile responsive */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   <StaggerContainer>
                     <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
@@ -566,8 +580,6 @@ export default function CVPage() {
                       </div>
                     </div>
 
-                    
-
                     <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
                       <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
                       <div className="flex justify-between items-start mb-3 relative z-10">
@@ -578,11 +590,11 @@ export default function CVPage() {
                               <Github className="w-4 h-4" />
                             </Link>
                           </Button>
-
                         </div>
                       </div>
                       <p className="text-slate-600 text-sm mb-3">
-                        An series of optimisations on an equation which aim to decrease the time of completion from under 60 seconds to be as short as possible.
+                        An series of optimisations on an equation which aim to decrease the time of completion from
+                        under 60 seconds to be as short as possible.
                       </p>
                       <div className="flex flex-wrap gap-1">
                         {["Vue.js", "Python", "FastAPI", "Chart.js"].map((tech) => (
@@ -607,7 +619,8 @@ export default function CVPage() {
                       </div>
                       <p className="text-slate-600 text-sm mb-3">
                         A Python project where the user can explore a Family Tree from a given array of the members,
-                        their age and their relations to eachother.
+                        their age and their relations to eachother, made through the use of Object Oriented Programming,
+                        Encapsulation and Abstraction.
                       </p>
                       <div className="flex flex-wrap gap-1">
                         {["Python", "Git", "Github"].map((tech) => (
@@ -621,17 +634,18 @@ export default function CVPage() {
                     <div className="border rounded-lg p-4 hover:shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden group">
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
                       <div className="flex justify-between items-start mb-3 relative z-10">
-                        <h3 className="font-semibold text-slate-900">Open Source Library</h3>
+                        <h3 className="font-semibold text-slate-900">Scheme Family Tree Explorer</h3>
                         <div className="flex gap-2">
                           <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform" asChild>
-                            <Link href="https://github.com/yourusername/awesome-library" target="_blank">
+                            <Link href="https://github.com/YAGavrilov19/Scheme-Family-Tree-Explorer" target="_blank">
                               <Github className="w-4 h-4" />
                             </Link>
                           </Button>
                         </div>
                       </div>
                       <p className="text-slate-600 text-sm mb-3">
-                        Lightweight utility library for React developers with 1000+ GitHub stars and active community.
+                        A redo of my Family Tree Explorer, redone in Scheme, differing from the Python approach by using
+                        Functional Programming instead of Object Oriented Programming.
                       </p>
                       <div className="flex flex-wrap gap-1">
                         {["TypeScript", "React", "Rollup", "Jest"].map((tech) => (
@@ -757,39 +771,48 @@ export default function CVPage() {
         </FloatingShape>
 
         <FadeIn delay={600}>
-          <footer className="bg-slate-900 text-white py-8 mt-16 relative">
+          {/* Footer */}
+          <footer className="bg-slate-900 text-white py-6 sm:py-8 mt-12 sm:mt-16 relative">
             <div className="absolute inset-0 overflow-hidden">
               <FloatingShape className="inset-0" speed={0.2} direction="up">
                 <GridPattern className="w-full h-full text-white opacity-5" />
               </FloatingShape>
             </div>
-            <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-              <p className="mb-4">Let's connect and build something amazing together!</p>
-              <StaggerContainer className="flex justify-center gap-4">
-                <Button variant="secondary" asChild className="hover:scale-105 transition-transform">
-                  <a href="mailto:yoan.gavrilov24@gmail.com" className="flex items-center">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+              <p className="mb-4 text-sm sm:text-base">Let's connect and build something amazing together!</p>
+              <StaggerContainer className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+                <Button variant="secondary" asChild className="hover:scale-105 transition-transform w-full sm:w-auto">
+                  <a href="mailto:yoan.gavrilov24@gmail.com" className="flex items-center justify-center">
                     <Mail className="w-4 h-4 mr-2" />
                     Get In Touch
                   </a>
                 </Button>
-                <Button variant="secondary" asChild className="hover:scale-105 transition-transform">
+                <Button variant="secondary" asChild className="hover:scale-105 transition-transform w-full sm:w-auto">
                   <Link
                     href="https://www.linkedin.com/in/yoan-gavrilov-08667322b"
                     target="_blank"
-                    className="flex items-center"
+                    className="flex items-center justify-center"
                   >
                     <Linkedin className="w-4 h-4 mr-2" />
                     LinkedIn
                   </Link>
                 </Button>
-                <Button variant="secondary" asChild className="hover:scale-105 transition-transform">
-                  <Link href="https://github.com/YAGavrilov19" target="_blank" className="flex items-center">
+                <Button variant="secondary" asChild className="hover:scale-105 transition-transform w-full sm:w-auto">
+                  <Link
+                    href="https://github.com/YAGavrilov19"
+                    target="_blank"
+                    className="flex items-center justify-center"
+                  >
                     <Github className="w-4 h-4 mr-2" />
                     GitHub
                   </Link>
                 </Button>
-                <Button variant="secondary" asChild className="hover:scale-105 transition-transform">
-                  <Link href="https://www.credly.com/users/yoan-gavrilov" target="_blank" className="flex items-center">
+                <Button variant="secondary" asChild className="hover:scale-105 transition-transform w-full sm:w-auto">
+                  <Link
+                    href="https://www.credly.com/users/yoan-gavrilov"
+                    target="_blank"
+                    className="flex items-center justify-center"
+                  >
                     <MedalIcon className="w-4 h-4 mr-2" />
                     Badges
                   </Link>
