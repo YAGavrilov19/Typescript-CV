@@ -404,7 +404,7 @@ export default function CVPage() {
                       </div>
                       <div className="flex items-center gap-1 text-sm text-slate-500">
                         <CalendarDays className="w-4 h-4" />
-                        <span>Jan. 2023 - July 2023</span>
+                        <span>Jan. 2023 - Jul. 2023</span>
                       </div>
                     </div>
                     <StaggerContainer>
