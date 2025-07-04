@@ -230,7 +230,7 @@ export default function CVPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <div className="w-2 h-8 bg-gradient-to-b from-green-500 to-blue-600 rounded-full"></div>
-                  Technical Skills
+                  Technigcal Skills
                 </CardTitle>
               </CardHeader>
               <CardContent>
