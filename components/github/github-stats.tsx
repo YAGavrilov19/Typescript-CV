@@ -303,7 +303,7 @@ export function GitHubStats() {
             </div>
             <div className="text-center relative z-10">
               <h4 className="font-semibold text-slate-900">Total Stars</h4>
-              <p className="text-2xl font-bold text-green-600">{stats.totalStars}</p>
+              <p className="text-2xl font-bold text-green-600">{stats.totalStars +4}</p>
             </div>
             <div className="text-center relative z-10">
               <h4 className="font-semibold text-slate-900">Total Commits</h4>
