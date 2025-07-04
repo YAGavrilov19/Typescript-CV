@@ -97,7 +97,7 @@ export function GitHubStats() {
     const fallbackStats = {
       totalRepos: 6,
       totalStars: 17,
-      totalCommits: 150,
+      totalCommits: 153,
       topLanguages: { "C#": 1, Python: 2, JavaScript: 1, TypeScript: 1, "C++": 1 },
     }
 
@@ -194,7 +194,7 @@ export function GitHubStats() {
                 <p className="text-2xl font-bold text-green-600">{fallbackStats.totalStars}</p>
               </div>
               <div className="text-center relative z-10">
-                <h4 className="font-semibold text-slate-900">Est. Commits (2024)</h4>
+                <h4 className="font-semibold text-slate-900">Total</h4>
                 <p className="text-2xl font-bold text-purple-600">{fallbackStats.totalCommits}</p>
               </div>
             </StaggerContainer>
